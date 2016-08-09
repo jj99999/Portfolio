@@ -4,7 +4,33 @@ body {
 	line-height: 32px;
 	color: #777777;
 	background-image: url("../images/scribble_light.png");
-}
+	}
+
+
+  
+.container {
+    height: auto;
+    }
+
+
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+	}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 
 a {
     text-decoration: none;
@@ -53,18 +79,15 @@ span.navigationSpace {
     padding-left: 50px;
 	}
 
-.container {
-	height: 1000px;
-	padding-bottom: 100px;
-	}
+
+
 
 .about {
 	position: absolute;
 	top: 100px;
 	left: 50px;
-	margin-right: 300px;
 	padding: 20px;
-	width: 650px;
+	max-width: 50%;
 	border-width: 5px;
 	border-color: #CDCDCD;
 	background: #ffffff;
@@ -76,6 +99,7 @@ span.navigationSpace {
 	height:auto;
 	float:left;
 	padding-right:20px;
+	margin-right: 10px;
 }
 
 .left {
@@ -126,7 +150,6 @@ form {
 	left: 50px;
 	padding: 20px;
 	width: 650px;
-	height: 500px;
 	background: #ffffff;
 	border-width: 5px;
 	border-color: #CDCDCD;
@@ -148,36 +171,38 @@ form {
 	}
 
 button {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 100px;
-  height: 30px;
-  color: #4aaaa5;
-  font-family: Tahoma, Geneva, sans-serif;
-  border-radius: 15px;
-  border: 5px gray;
-	}
+	  position: absolute;
+	  box-sizing: border-box;
+	  right: 20px;
+	  bottom: 20px;
+	  width: 100px;
+	  height: 30px;
+	  color: #4aaaa5;
+	  font-family: Tahoma, sans-serif;
+	  border-radius: 15px;
+	  border: 5px gray;
+		}
 
 .connect {
-	position:absolute;
+	position: absolute;
 	right: 25px;
 	top: 100px;
-	width: 270px;
-	height: 150px;
+	max-width: 25%;
+	padding:15px;
+
 	background: white;
 	border-width: 5px;
 	border-color: #CDCDCD;
 	font-size: 24px;
 	text-align: center;
 	color: #4aaaa5;
-}
+	}
 
-.footer {
+footer {
 	position: fixed;
 	bottom:0;
 	width: 100%;
-	height: 50px;
+	height: 5%;
 	padding: 10px;
 	border-top: 5px solid #4aaaa5;
 	background: #666666;
@@ -187,6 +212,9 @@ button {
 	font-size: 12px	;
 	}
 
+	
+
+
 @media screen and (max-width: 980px) {
 
 		.about img{
@@ -195,9 +223,30 @@ button {
 			float:none;
 			}			
 		
+		.connect {
+			margin-left:5%;
+		}	
+
 		}
 
 	@media screen and (max-width: 768px) {
+
+		.about {
+			width:100%;
+		}
+
+		.about img{
+			width: 100%;
+			height:auto;
+			clear:both;
+			float:left;
+			}	
+
+		.connect {
+			position:relative;
+			margin:none;
+
+		}
 		
 	}
 
