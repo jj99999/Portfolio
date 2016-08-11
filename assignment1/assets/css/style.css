@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
 	font-size: 24px;
 	font: Arial, Helvetica, sans-serif;
@@ -6,31 +10,14 @@ body {
 	background-image: url("../images/scribble_light.png");
 	}
 
-
   
 .container {
-    height: auto;
+    position: relative;
+    margin:auto;
+    height:auto;
     }
 
 
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-	}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
 a {
     text-decoration: none;
@@ -51,7 +38,7 @@ h1 {
 	position: fixed;
 	background: #4aaaa5;
 	width: 325px;
-	height: 50px;
+	height: 70px;
 	padding: 10px;
 	left: 50px;
 	font-family: Georgia, Times, serif;
@@ -69,7 +56,7 @@ nav {
 	position: fixed;
 	top: 0;
 	right: 0;	
-	width: 300px;
+	width: auto;
 	height: 30px;
 	padding: 20px;
 	font-size: 18px;
@@ -80,14 +67,12 @@ span.navigationSpace {
 	}
 
 
-
-
 .about {
 	position: absolute;
 	top: 100px;
-	left: 50px;
+	left: 25px;
+	width: 66%;
 	padding: 20px;
-	max-width: 50%;
 	border-width: 5px;
 	border-color: #CDCDCD;
 	background: #ffffff;
@@ -116,10 +101,9 @@ p {
 	position: absolute;
 	top: 100px;
 	left: 50px;
-	margin-right: 300px;
 	padding: 20px;
-	width: 650px;
-	height: 775px;
+	max-width: 66%;
+	height: auto;
 	border-width: 5px;
 	border-color: #CDCDCD;
 	background: #ffffff;
@@ -129,15 +113,20 @@ p {
 	float: left;
 	margin: 10px 10px 10px 10px;
 	left: 15px;
-	height: 200px;
-	width: 300px;
+	width: 45%;
+	height: auto;
+	}
+
+.pictureblock img {
+	width: 100%;
+	height: auto;
 	}
 
 figcaption {
 	position: relative;
 	bottom: 50px;
 	font-size: 20px;
-	width: 300px;
+	width: 100%;
 	background-color: #4aaaa5;
 	text-align: center;
 	color: white;
@@ -187,9 +176,8 @@ button {
 	position: absolute;
 	right: 25px;
 	top: 100px;
-	max-width: 25%;
 	padding:15px;
-
+	width:25%;
 	background: white;
 	border-width: 5px;
 	border-color: #CDCDCD;
@@ -202,7 +190,7 @@ footer {
 	position: fixed;
 	bottom:0;
 	width: 100%;
-	height: 5%;
+	height: 10%;
 	padding: 10px;
 	border-top: 5px solid #4aaaa5;
 	background: #666666;
@@ -217,12 +205,36 @@ footer {
 
 @media screen and (max-width: 980px) {
 
+		.container {
+			height:1200px;
+		}
+
+		nav {
+			position: fixed;
+			right: 25px;
+		}
+
 		.about img{
-			width: 100%;
+			width: 50%;
 			height:auto;
-			float:none;
+			float:left;
 			}			
 		
+		.pictureblock {
+			width: 100%;
+			height: auto;
+			margin:0px;
+		}
+
+		.pictureblock img {
+			width: 100%;
+			height: auto;
+		}
+
+		.pictureblock figcaption {
+			width: 100%;
+		}
+
 		.connect {
 			margin-left:5%;
 		}	
@@ -231,30 +243,145 @@ footer {
 
 	@media screen and (max-width: 768px) {
 
-		.about {
-			width:100%;
+		.container {
+			height:1200px;
 		}
 
-		.about img{
+		header {
+	
+		}
+
+		.about {
+			position: static;
+			margin-top: 95px;
+			margin-left:50px;
+			margin-bottom: 25px;
+			width:668px;
+			}
+
+		.portfolio {
+			position:static;
+			margin-top: 95px;
+			margin-left:50px;
+			margin-right:50px;
+			margin-bottom:25px;
+			max-width:100%;
+			height:900px;
+		}	
+
+		.pictureblock {
+			width: 47.5%;
+			height: auto;
+			margin-right: 10px;
+		}
+
+		.pictureblock img {
 			width: 100%;
-			height:auto;
-			clear:both;
-			float:left;
-			}	
+			height: auto;
+		}
+
+		.pictureblock figcaption {
+			width: 100%;
+		}
+
+		form {
+			position:static;
+			margin-top: 95px;
+			margin-left:50px;
+			margin-bottom:25px;
+			width:668px;
+		}
 
 		.connect {
-			position:relative;
-			margin:none;
+			position: static;
+			margin-top: 10px;
+			margin-left: 50px;
+			width: 668px;
+			height:auto;
+			}
 
-		}
 		
 	}
 
 	@media screen and (max-width: 640px) {
 
+		.container {
+			height:2700px;
+		}
+
 		.header {
 			position:fixed;
+			height: 50px;
+			width: 100%;
 		}
-		
+
+		.about {
+			position: static;
+			margin-top: 95px;
+			margin-left:10px;
+			margin-bottom: 25px;
+			width:620px;
+			}
+
+		.portfolio {
+			position:static;
+			margin-top: 95px;
+			margin-left:10px;
+			margin-bottom:25px;
+			width:620px;
+			height:2450px;
+		}	
+
+		.pictureblock {
+			width: 100%;
+			height: auto;
+			margin-right: 10px;
+		}
+
+		.pictureblock img {
+			width: 100%;
+			height: auto;
+		}
+
+		.pictureblock figcaption {
+			width: 100%;
+		}
+
+		form {
+			position:static;
+			margin-top: 95px;
+			margin-left:10px;
+			margin-bottom:25px;
+			width:620px;
+		}
+
+		.connect {
+			position: static;
+			margin-top: 10px;
+			margin-left: 10px;
+			width: 620px;
+			height:auto;
+			}
+
+		h1 {
+			position:fixed;
+			left:0;
+			width:640px;
+			height:50px;
+			top:0;
+		}
+		nav {
+			position:fixed;
+			top:50px;
+			left:0;
+			width:640px;
+			height:35px;
+			background:white;
+			z-index: 3;
+			text-align: center;
+			vertical-align: text-top;
+			padding:0px;
+			
+		}
 	}
 	
